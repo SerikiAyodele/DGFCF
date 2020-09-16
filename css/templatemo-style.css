@@ -32,8 +32,8 @@ a:hover { text-decoration: none; }
 	margin: 0 auto;
 }
 section {
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 0px;
+	padding-bottom: 0;
 }
 hr {
 	display: block; height: 1px;
@@ -54,7 +54,7 @@ hr {
 .site-logo {
 	height: 50px;
 	padding: 0;
-	width: 70px;									
+	width: 60px;									
 	 
 }
 .site-name,
@@ -130,7 +130,7 @@ hr {
 	height: 539px;
 }
 .header-img-3 {
-	background: url(../img/headerrrr.png) no-repeat center center;
+	background: url(../img/header3.jpg) no-repeat center center;
 	background-size: cover;
 	height: 500px;
 }
@@ -738,5 +738,9 @@ footer { background: #122f35; }
 }
 @media screen and (max-width: 360px) {
 	.crsl-nav { top: -127px; }
+}
+@media screen and (max-width: 1199px){
+    .site-logo {
+       width: 45px;}
 }
 
