@@ -14,8 +14,9 @@ TABLE OF CONTENT
     8. Footer Nav
     9. About
     10. Profile
-    11. Contact
-    12. Media Queries
+	11. Contact
+	12. Events
+    13. Media Queries
 	
 -----------------------*/
 
@@ -133,6 +134,11 @@ hr {
 	background: url(../img/header3.jpg) no-repeat center center;
 	background-size: cover;
 	height: 500px;
+}
+.eventheader-img {
+	background: url(../img/eventheader.jpg) no-repeat center center;
+	background-size: cover;
+	height: 300px;
 }
 
 .welcome-container {
@@ -261,6 +267,7 @@ hr {
 	overflow: hidden;
 	max-width: 310px;
 	margin: 0 auto;
+	
 }
 .tm-block {
 	font-weight: 300;
@@ -437,6 +444,7 @@ hr {
 .tm-progress { border-radius: 0; }
 .tm-progress .progress-bar { background-color: #225965; }
 .margin-bottom-30 { margin-bottom: 30px; }
+.margin-right-70{margin-right: 70px; }
 
 /* 8. Footer nav */
 .footer-nav { font-size: 12px; }
@@ -482,10 +490,19 @@ footer { background: #122f35; }
 /* 9. About */
 .tm-img-container {
 	cursor: pointer;
-	display: inline-block;
+	display: relative;
 	position: relative;
-	max-width: 100%;
+	max-width: 100px;
+	margin: 20px;
 }
+.tm-img-container1{
+	display: relative;
+	width:200px;
+}
+.gumroad-button{
+	margin-bottom: 15px;
+}
+
 .tm-img-overlay {
 	position: absolute;
 	width: 100%;
@@ -514,6 +531,12 @@ footer { background: #122f35; }
 	font-weight: 700;
 	text-transform: uppercase;
 }
+.container1{
+	border: 1px solid #466995;
+    margin: 10px;
+	display: inline-block;
+	min-width: 1px;
+}
 .img-description { color: #0fea7b; }
 .img-title,
  .img-description {
@@ -525,6 +548,70 @@ footer { background: #122f35; }
 	max-width: 600px;
 	margin: 0 auto;
 }
+
+.cards{
+	margin:0 auto;
+	max-width: 1000px;
+	display:grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 20px;
+	font-family: sans-serif;
+	margin-bottom: 15px;
+	
+	
+}
+
+.card{
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.card__image{
+	width: 100%;
+	display:block;
+	
+}
+
+.card__content{
+	line-height:1.5;
+	font-size:0.9em;
+	padding:15px;
+	background: #fafafa;
+
+}
+
+.card__content> p:first-of-type{
+	margin-top:0;
+}
+
+.card__content> p:last-of-type{
+	margin-bottom:0;
+}
+
+.card__info{
+	padding:15px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #555555;
+	background: #eeeeee;
+	font-size:0.8em;
+	border-bottom:2px solid #cccccc;
+}
+
+.card__info i{
+	font-size:1.02em;
+	margin-right:8px;
+}
+
+.card__link{
+	color: #64968c;
+	text-decoration:none;
+}
+
+.card__link:hover{
+	text-decoration: underline;
+}
+
 /* Flexbox fix for IE 10 http://stackoverflow.com/questions/16808815/ie10-flexbox-p-element-non-wrapping */
 .about-h3 {
 	font-size: 18px;
@@ -569,7 +656,71 @@ footer { background: #122f35; }
 .folio-filters li a:focus { text-decoration: none; /* Remove underline after click in IE */ }
 .folio-item { text-align: center; }
 
-/* 11. Contact */
+/* 11. Events */
+.tm-img-container {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	max-width: 100%;
+}
+.tm-img-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(7, 38, 40, 0.8);
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        -webkit-box-pack: center;
+	        justify-content: center;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        -webkit-box-orient: vertical;
+	        -webkit-box-direction: normal;
+	        flex-direction: column;
+	opacity: 0;
+	-webkit-transition: all 0.3s ease;
+	        transition: all 0.3s ease;
+}
+.tm-img-container:hover .tm-img-overlay { opacity: 1; }
+.img-title {
+	color: white;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.img-description { color: #0fea7b; }
+.img-title,
+ .img-description {
+ 	text-align: center;
+ }
+ 
+.tm-about-left { max-width: 603px; }
+.tm-about-right {
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+
+/* Flexbox fix for IE 10 http://stackoverflow.com/questions/16808815/ie10-flexbox-p-element-non-wrapping */
+.about-h3 {
+	font-size: 18px;
+	font-weight: 700;
+}
+.about-description { line-height: 1.6em; }
+.recent-post-container {
+	max-width: 475px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.recent-post-title { font-size: 22px; }
+.font-weight-700 { font-weight: 700; }
+.red-text { color: red; }
+
+/* 12. Contact */
 .contact-point {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -604,7 +755,7 @@ footer { background: #122f35; }
 }
 .google-map { height: 420px; }
 
-/* 12. Media Queries */
+/* 13. Media Queries */
 @media screen and (max-width: 1199px) {
 	.site-logo { width: 12px; }
 	.site-name { font-size: 26px; }
@@ -743,4 +894,10 @@ footer { background: #122f35; }
     .site-logo {
        width: 50px;}
 }
+
+
+
+
+
+
 
